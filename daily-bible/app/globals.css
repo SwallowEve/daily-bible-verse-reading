@@ -6,6 +6,16 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --cyan-hsl: hsl(193, 38%, 86%);
+  --green-hsl: hsl(150, 100%, 66%);
+  --g-blue-hsl: hsl(217, 19%, 38%);
+  --dg-blue-hsl: hsl(217, 19%, 24%);
+  --d-blue-hsl: hsl(218, 23%, 16%);
+}
+
+@font-face {
+  font-family: 'Manrope', sans-serif;
+  src: url("../public/fonts/Manrope-Regular.ttf");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +26,27 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+main {
+  font-family: 'Manrope';
+  color: var(--cyan-hsl);
+  background: var(--d-blue-hsl);
+}
+
+.advice-field{
+  background: var(--dg-blue-hsl);
+}
+
+.advice-title{
+  color: var(--green-hsl);
+}
+
+.buttonBg{
+  background: var(--green-hsl);  
+}
+
+.buttonBg:hover, .buttonBg:active{
+  -webkit-box-shadow: 1px 1px 20px 11px hsla(150, 100%, 66%, 0.2);
+  -moz-box-shadow: 1px 1px 20px 11px hsla(150, 100%, 66%, 0.2);
+  box-shadow: 1px 1px 15px 8px hsla(150, 100%, 66%, 0.2);
+  cursor: pointer;
 }
